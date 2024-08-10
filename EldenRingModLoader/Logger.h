@@ -19,7 +19,7 @@ public:
 		}
 	}
 
-	void Log(std::string msg, ...)
+	void Log(std::string msg, ...) const
 	{
 		va_list args;
 		va_start(args, msg);

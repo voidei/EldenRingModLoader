@@ -33,7 +33,7 @@
     <LinkIncremental>false</LinkIncremental>
     <TargetName>dinput8</TargetName>
     <GenerateManifest>false</GenerateManifest>
-    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
+    <PostBuildEventUseInBuild>true</PostBuildEventUseInBuild>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>

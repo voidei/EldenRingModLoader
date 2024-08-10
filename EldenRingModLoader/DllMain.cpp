@@ -10,7 +10,7 @@
 #pragma comment(linker, "/export:DllUnregisterServer=C:\\\\Windows\\\\System32\\\\dinput8.dll.DllUnregisterServer,PRIVATE")
 #pragma comment(linker, "/export:GetdfDIJoystick=C:\\\\Windows\\\\System32\\\\dinput8.dll.GetdfDIJoystick")
 
-DWORD WINAPI LoaderThread(LPVOID lpParam)
+static DWORD WINAPI LoaderThread(LPVOID lpParam)
 {
 	LoadLibraryA("psapi.dll"); 
 	ModLoader loader;
@@ -18,7 +18,7 @@ DWORD WINAPI LoaderThread(LPVOID lpParam)
 	return S_OK;
 }
 
-BOOL WINAPI DllMain(HINSTANCE module, DWORD reason, LPVOID)
+static BOOL WINAPI DllMain(HINSTANCE module, DWORD reason, LPVOID)
 {
 	if (reason == DLL_PROCESS_ATTACH)
 	{
